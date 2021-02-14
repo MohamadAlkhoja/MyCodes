@@ -165,15 +165,15 @@ if camera_type == 'picamera':
             line_thickness=8,
             min_score_thresh=0.40)
 	
-	state = "true"
+	
             object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
             if int(classes[i]) == 0:
                 for j in range(len(classes)):
                     if int(classes[j]) == 76:
-                        state = "false";
+                        
 
 
-                if state == "true":
+                
                     object_name = 'WARNING There is a STRANGER PERSON'
                     GPIO.output(17, True)
                     sleep(0.1)
